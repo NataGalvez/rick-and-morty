@@ -1,5 +1,5 @@
 import { StarBorder } from "@mui/icons-material";
-import { Collapse, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from "@mui/material";
+import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { useEffect, useState } from "react"
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
@@ -8,9 +8,8 @@ import { TLocations } from "../../../types/locations";
 function Locations() {
   const [locations, setLocations] = useState([])
   const [citys, setCitys] =useState(0)
-  const [page, setPage] = useState(1);
-  const [localidades, setLocalidades] = useState<any>([])
-
+  const [localidades, setLocalidades] = useState<object>([])
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/location`)
       .then((response) => {
@@ -20,7 +19,7 @@ function Locations() {
         setLocations(articulos.results)
        
       })
-  }, [page])
+  }, [])
   const  indexLocations = (locations:any) => {
     return locations.reduce((acc:any,act:any)=>{
       const {type} = act
@@ -31,7 +30,7 @@ function Locations() {
       return acc
     },{})
   };
-  const [open, setOpen] = useState(true);
+
 
   const handleClick = (e:number) => {
     setOpen(!open);
@@ -41,11 +40,11 @@ function Locations() {
 useEffect(()=>{
  setLocalidades(indexLocations(locations))
  
-},[open])
+},[open,locations])
 
     return (
       <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      sx={{ width: '100%',  bgcolor: 'background.paper' }}
     >
        {Object.keys(localidades).map((element,index)=>{
        return (
