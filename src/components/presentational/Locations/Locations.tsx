@@ -15,8 +15,8 @@ function Locations() {
       .then((response) => {
         return response.json()
       })
-      .then((articulos) => {
-        setLocations(articulos.results)
+      .then((location) => {
+        setLocations(location.results)
        
       })
   }, [])
