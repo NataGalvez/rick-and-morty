@@ -7,7 +7,7 @@ import Episodes from "./components/presentational/Episodes/Episodes";
 
 function App() {
   return (
-    <Router basename={import.meta.env.DEV ? "/" : "/react-vite-gh-pages/"}>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
