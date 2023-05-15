@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build --base=/rick-and-morty/",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
   "dependencies": {
