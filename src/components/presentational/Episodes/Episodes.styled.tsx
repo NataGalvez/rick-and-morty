@@ -1,4 +1,4 @@
-import { Card, ListItemText, Stack, styled } from "@mui/material";
+import { ListItemText, Stack, styled } from "@mui/material";
 
 interface Props {
   status: string;

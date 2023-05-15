@@ -35,7 +35,6 @@ export default function Navbar() {
     setAnchorEl(null);
     setItemSelected(url);
   };
-  console.log(itemSelected);
   return (
     <ThemeProvider theme={darkTheme}>
       <Box sx={{ flexGrow: 1 }}>

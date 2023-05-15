@@ -23,7 +23,6 @@ function Episodes() {
       })
       .then((episode) => {
         setEpisodes(episode.results);
-        console.log(episode);
       });
   }, []);
   const handleClick = (e: number) => {
