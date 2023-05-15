@@ -8,5 +8,9 @@ export default defineConfig(({ command }) => {
     base: "/",
   };
 
+  if (command !== "serve") {
+    config.base = "/react-vite-gh-pages/";
+  }
+
   return config;
 });
