@@ -1,17 +1,15 @@
-import { Card, Stack,styled } from "@mui/material"
+import { Card, ListItemText, Stack, styled } from "@mui/material";
 
-interface Props{
-  gender: string
+interface Props {
+  status: string;
 }
 
-export const StackStyled = styled(Stack)(()=>({
- display:'flex',
- flexDirection:'row',
- flexWrap:'wrap',
- justifyContent:'center'
- 
-  }))
-  export const CardStyle = styled(Card)((props:Props)=>({
-  border: `1px solid ${props.gender === 'Female' ? '#55d33ede': 'none'}`
-     }))
-     
+export const StackStyled = styled(Stack)(() => ({
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  justifyContent: "center",
+}));
+export const TextStyle = styled(ListItemText)((props: Props) => ({
+  color: ` ${props.status === "Alive" ? "green" : "red"}`,
+}));
