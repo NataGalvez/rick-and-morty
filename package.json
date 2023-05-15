@@ -1,12 +1,14 @@
 {
-  "name": "challenge",
+  "name": "rick-and-morty",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build --base=/rick-and-morty/",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
