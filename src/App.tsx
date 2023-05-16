@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/rick-and-morty" element={<Home />} />
         <Route path="/protagonistas" element={<PrincipalCharacters />} />
         <Route path="/lugares" element={<Locations />} />
         <Route path="/episodios" element={<Episodes />} />

@@ -55,7 +55,10 @@ export default function Navbar() {
               component="div"
               sx={{ flexGrow: 1, display: "flex", cursor: "pointer" }}
             >
-              <div onClick={() => goRoute("")}> Rick and Morty app </div>
+              <div onClick={() => goRoute("/rick-and-morty")}>
+                {" "}
+                Rick and Morty app{" "}
+              </div>
               <span>
                 {itemSelected.length > 0 ? " -" : ""}{" "}
                 {itemSelected.length > 0 ? itemSelected : ""}
