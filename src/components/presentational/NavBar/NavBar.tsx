@@ -50,10 +50,14 @@ export default function Navbar() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Rick and Morty app{" "}
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, display: "flex", cursor: "pointer" }}
+            >
+              <div onClick={() => goRoute("")}> Rick and Morty app </div>
               <span>
-                {itemSelected.length > 0 ? "-" : ""}{" "}
+                {itemSelected.length > 0 ? " -" : ""}{" "}
                 {itemSelected.length > 0 ? itemSelected : ""}
               </span>
             </Typography>
