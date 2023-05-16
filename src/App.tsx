@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/presentational/Home/Home";
 import Navbar from "./components/presentational/NavBar/NavBar";
 import PrincipalCharacters from "./components/presentational/PrincipalCharacters/PrincipalCharacters";
@@ -7,7 +7,7 @@ import Episodes from "./components/presentational/Episodes/Episodes";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path="/lugares" element={<Locations />} />
         <Route path="/episodios" element={<Episodes />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
